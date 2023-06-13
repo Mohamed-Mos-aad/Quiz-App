@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Start Webfonts File -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Start CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+
+    <!-- Start Project -->
+    <div class="container">
+        <div class="menu" id="menu">
+            <div class="title">
+                <h1>Quiz App</h1>
+            </div>
+            <div class="boxs">
+                <div class="box" id="generalKnowledge">
+                    <i id="generalKnowledge" class="fa-solid fa-brain"></i>
+                    <h2 id="generalKnowledge">General Knowledge</h2>
+                </div>
+                <div class="box" id="Books">
+                    <i id="Books" class="fa-solid fa-book"></i>
+                    <h2 id="Books">Books</h2>
+                </div>
+                <div class="box" id="Film">
+                    <i id="Film" class="fa-solid fa-film"></i>
+                    <h2 id="Film">Film</h2>
+                </div>
+                <div class="box" id="Music">
+                    <i id="Music" class="fa-solid fa-music"></i>
+                    <h2 id="Music">Music</h2>
+                </div>
+                <div class="box" id="Musicals">
+                    <i id="Musicals" class="fa-solid fa-masks-theater"></i>
+                    <h2 id="Musicals">Musicals & Theatres</h2>
+                </div>
+                <div class="box" id="Television">
+                    <i id="Television" class="fa-solid fa-tv"></i>
+                    <h2 id="Television">Television</h2>
+                </div>
+                <div class="box" id="videoGames">
+                    <i id="videoGames" class="fa-solid fa-gamepad"></i>
+                    <h2 id="videoGames">Video Games</h2>
+                </div>
+                <div class="box" id="boardGames">
+                    <i id="boardGames" class="fa-solid fa-chess-board"></i>
+                    <h2 id="boardGames">Board Games</h2>
+                </div>
+                <div class="box" id="Science">
+                    <i id="Science" class="fa-solid fa-flask"></i>
+                    <h2 id="Science">Science & Nature</h2>
+                </div>
+                <div class="box" id="Computers">
+                    <i id="Computers" class="fa-solid fa-computer"></i>
+                    <h2 id="Computers">Computers</h2>
+                </div>
+                <div class="box" id="Mathematics">
+                    <i id="Mathematics" class="fa-solid fa-calculator"></i>
+                    <h2 id="Mathematics">Mathematics</h2>
+                </div>
+                <div class="box" id="Sports">
+                    <i id="Sports" class="fa-solid fa-medal"></i>
+                    <h2 id="Sports">Sports</h2>
+                </div>
+                <div class="box" id="Geography">
+                    <i id="Geography" class="fa-solid fa-book-atlas"></i>
+                    <h2 id="Geography">Geography</h2>
+                </div>
+                <div class="box" id="History">
+                    <i id="History" class="fa-solid fa-monument"></i>
+                    <h2 id="History">History</h2>
+                </div>
+                <div class="box" id="Politics">
+                    <i id="Politics" class="fa-solid fa-landmark"></i>
+                    <h2 id="Politics">Politics</h2>
+                </div>
+                <div class="box" id="Animals">
+                    <i id="Animals" class="fa-solid fa-paw"></i>
+                    <h2 id="Animals">Animals</h2>
+                </div>
+                <div class="box" id="Vehicles">
+                    <i id="Vehicles" class="fa-solid fa-car"></i>
+                    <h2 id="Vehicles">Vehicles</h2>
+                </div>
+                <div class="box" id="Comics">
+                    <i id="Comics" class="fa-solid fa-comment-dots"></i>
+                    <h2 id="Comics">Comics</h2>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="nums">
+                    <h3 class="num" id="10">10</h3>
+                    <h3 class="num" id="20">20</h3>
+                    <h3 class="num" id="30">30</h3>
+                    <h3 class="num" id="40">40</h3>
+                    <h3 class="num" id="50">50</h3>
+                </div>
+                <div class="startBtn">
+                    <button id="startBtn">Start</button>
+                </div>
+            </div>
+        </div>
+        <div class="quiz" id="quiz">
+            <div class="nav">
+                <div class="progress">
+                    <h4 id="progressTitle">Total test : 0% complated</h4>
+                    <div class="progressBar">
+                        <span id="progressBar"></span>
+                    </div>
+                </div>
+                <div class="timer">
+                    <div class="top-right">
+                        <div class="timer-bar" id="top-right"></div>
+                    </div>
+                    <div class="bottom-right">
+                        <div class="timer-bar" id="bottom-right"></div>
+                    </div>
+                    <div class="bottom-left">
+                        <div class="timer-bar" id="bottom-left"></div>
+                    </div>
+                    <div class="top-left">
+                        <div class="timer-bar" id="top-left"></div>
+                    </div>
+                    <div class="center"></div>
+                    <h5 id="counter">60</h5>
+                </div>
+            </div>
+            <div class="question-body" id="questionBody">
+                <div class="question">
+                    <h4 id="question">What is the capital of France?</h4>
+                </div>
+                <div class="options">
+                    <h5 class="option">Paris</h5>
+                    <h5 class="option">London</h5>
+                    <h5 class="option">Berlin</h5>
+                    <h5 class="option">Brussels</h5>
+                </div>
+                <div class="nextBtn">
+                    <button id="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="result" id="result">
+                <p id="message">
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Project -->
+
+    <!-- Start Webfonts Js File -->
+    <script src="js/all.js"></script>
+    <!-- Start Js File -->
+    <script src="js/main.js"></script>
+</body>
+</html>

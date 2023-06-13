@@ -1,0 +1,708 @@
+/* Start Main Variables */
+:root
+{
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --main-color: #222831;
+    --second-color: #393E46;
+    --third-color: #00ADB5;
+    --font-color: #EEEEEE;
+}
+/* End Main Variables */
+/* Start Main Rules */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: var(--main-color);
+}
+.container
+{
+    width: 95%;
+    margin: 20px auto;
+}
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .container
+    {
+        width: 95%;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
+/* End Main Rules */
+/* Start Menu */
+.menu
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 100px;
+}
+.menu .title
+{
+    text-align: center;
+}
+.menu .title h1
+{
+    font-family: var(--main-font);
+    font-size: 76px;
+    color: var(--font-color);
+    cursor: default;
+}
+.menu .boxs
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 50px;
+}
+.menu .boxs .box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--font-color);
+    border: solid 1px var(--second-color);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 25px;
+    transition: 0.3s;
+}
+.menu .boxs .box:hover
+{
+    border: solid 1px var(--third-color);
+    color: var(--third-color);
+}
+.menu .boxs .box i
+{
+    font-size: 24px;
+}
+.menu .boxs .box h2
+{
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.menu .footer
+{
+    display: flex;
+    justify-content: space-between;
+}
+.menu .footer .nums
+{
+    display: flex;
+    gap: 15px;
+}
+.menu .footer .nums h3
+{
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--second-color);
+    text-align: center;
+    border: solid 1px var(--second-color);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu .footer .nums h3:hover
+{
+    border: solid 1px var(--third-color);
+    color: var(--third-color);
+}
+.menu .footer .startBtn button
+{
+    background-color: transparent;
+    border: solid 1px var(--second-color);
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--second-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu .footer .startBtn button:hover
+{
+    border: solid 1px var(--third-color);
+    color: var(--third-color);
+}
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .menu
+    {
+        gap: 25px;
+    }
+    .menu .title h1
+    {
+        font-size: 36px;
+    }
+    .menu .boxs
+    {
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+    }
+    .menu .footer
+    {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+    }
+    .menu .footer .nums
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .menu .footer .startBtn button
+    {
+        width: 100%;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+    .menu .title h1
+    {
+        font-size: 36px;
+    }
+    .menu .boxs
+    {
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+    .menu .boxs
+    {
+        grid-template-columns: repeat(5,1fr);
+        gap: 15px;
+    }
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
+/* End Menu */
+/* Start Quiz */
+.quiz
+{
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+}
+/* End Quiz */
+/* Start Quiz Nav */
+.quiz .nav
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quiz .nav .progress
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.quiz .nav .progress h4
+{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--font-color);
+    cursor: default;
+}
+.quiz .nav .progress .progressBar
+{
+    width: 100%;
+    height: 10px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    position: relative;
+}
+.quiz .nav .progress .progressBar span
+{
+    width: 0%;
+    height: 10px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+.quiz .nav .timer
+{
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 10px var(--second-color);
+    border-radius: 38px;
+    position: relative;
+}
+.quiz .nav .timer .top-right
+{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    overflow: hidden;
+}
+.quiz .nav .timer .top-right .timer-bar
+{
+    width: 38px;
+    height: 38px;
+    border: solid 10px var(--third-color);
+    border-radius: 0 38px 0 0;
+    position: absolute;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    animation-name: top-right;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes top-right
+{
+    0%
+    {
+        transform: rotate(-90deg);
+    }
+    25%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.quiz .nav .timer .bottom-right
+{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+}
+.quiz .nav .timer .bottom-right .timer-bar
+{
+    width: 38px;
+    height: 38px;
+    border: solid 10px var(--third-color);
+    border-radius: 0 0 38px 0;
+    position: absolute;
+    top: 0;
+    transform-origin: left top;
+    transform: rotate(-90deg);
+    animation-name: bottom-right;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes bottom-right
+{
+    0%
+    {
+        transform: rotate(-90deg);
+    }
+    25%
+    {
+        transform: rotate(-90deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.quiz .nav .timer .bottom-left
+{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    overflow: hidden;
+}
+.quiz .nav .timer .bottom-left .timer-bar
+{
+    width: 38px;
+    height: 38px;
+    border: solid 10px var(--third-color);
+    border-radius: 0 0 0 38px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: right top;
+    transform: rotate(-90deg);
+    animation-name: bottom-left;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes bottom-left
+{
+    0%
+    {
+        transform: rotate(-90deg);
+    }
+    25%
+    {
+        transform: rotate(-90deg);
+    }
+    50%
+    {
+        transform: rotate(-90deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.quiz .nav .timer .top-left
+{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    overflow: hidden;
+}
+.quiz .nav .timer .top-left .timer-bar
+{
+    width: 38px;
+    height: 38px;
+    border: solid 10px var(--third-color);
+    border-radius: 38px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+    animation-name: top-left;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes top-left
+{
+    0%
+    {
+        transform: rotate(-90deg);
+    }
+    25%
+    {
+        transform: rotate(-90deg);
+    }
+    50%
+    {
+        transform: rotate(-90deg);
+    }
+    75%
+    {
+        transform: rotate(-90deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.quiz .nav .timer .center
+{
+    width: 56px;
+    height: 56px;
+    background-color: var(--main-color);
+    border-radius: 38px;
+    position: absolute;
+}
+.quiz .nav .timer h5
+{
+    font-family: var(--main-font);
+    font-size: 26px;
+    color: var(--font-color);
+    position: absolute;
+    cursor: default;
+}
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .quiz .nav .progress h4
+    {
+        font-size: 16px;
+    }
+    .quiz .nav .timer
+    {
+        width: 46px;
+        height: 46px;
+    }
+    .quiz .nav .timer .top-right
+    {
+        width: 46px;
+        height: 46px;
+    }
+    .quiz .nav .timer .bottom-right
+    {
+        width: 46px;
+        height: 46px;
+    }
+    .quiz .nav .timer .bottom-left
+    {
+        width: 46px;
+        height: 46px;
+    }
+    .quiz .nav .timer .top-left
+    {
+        width: 46px;
+        height: 46px;
+    }
+    .quiz .nav .timer .top-right .timer-bar
+    {
+        width: 23px;
+        height: 23px;
+    }
+    .quiz .nav .timer .bottom-right .timer-bar
+    {
+        width: 23px;
+        height: 23px;
+    }
+    .quiz .nav .timer .bottom-left .timer-bar
+    {
+        width: 23px;
+        height: 23px;
+    }
+    .quiz .nav .timer .top-left .timer-bar
+    {
+        width: 23px;
+        height: 23px;
+    }
+    .quiz .nav .timer .center
+    {
+        width: 26px;
+        height: 26px;
+    }
+    .quiz .nav .timer h5
+    {
+        font-size: 17px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
+/* End Quiz Nav */
+/* Start Question Body */
+.question-body
+{
+    height: 80vh;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.question-body .question h4
+{
+    font-family: var(--main-font);
+    font-size: 36px;
+    color: var(--font-color);
+    margin: 35px 0;
+    cursor: default;
+}
+.question-body .options
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+.question-body .options h5
+{
+    font-family: var(--main-font);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--font-color);
+    border: solid 1px var(--second-color);
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.question-body .options h5:hover
+{
+    border: solid 1px var(--third-color);
+}
+.question-body .nextBtn
+{
+    display: flex;
+    justify-content: end;
+}
+.question-body .nextBtn button
+{
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 22px;
+    color: var(--font-color);
+    padding: 15px 60px;
+    cursor: pointer;
+}
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .question-body .question h4
+    {
+        font-size: 18px;
+    }
+    .question-body .options h5
+    {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .question-body .nextBtn button
+    {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
+/* End Question Body */
+/* Start Result */
+.result
+{
+    display: none;
+}
+.result p
+{
+    margin: 50px 0;
+    font-family: var(--main-font);
+    font-size: 26px;
+    line-height: 38px;
+    color: var(--font-color);
+}
+.result p span
+{
+    color: var(--third-color);
+    margin-left: 10px;
+}
+.result p span:last-of-type
+{
+    color: red;
+}
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .result p
+    {
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+    .result p
+    {
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
+/* End Result */
